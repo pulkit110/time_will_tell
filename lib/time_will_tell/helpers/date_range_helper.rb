@@ -40,7 +40,7 @@ module TimeWillTell
           end
         end
 
-        without_year = I18n.t("#{scope}.#{template}", dates)
+        without_year = I18n.t("#{scope}.#{template}", **dates)
 
         if show_year && from_date.year == to_date.year
           I18n.t("#{scope}.with_year", date_range: without_year, year: from_year, default: without_year)
